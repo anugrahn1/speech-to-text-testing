@@ -23,4 +23,4 @@ def speechToText():
         print("sent to chatgpt")
     else:
         print("not sent")
-    print(userCommand)
+    return userCommand
