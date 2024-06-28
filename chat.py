@@ -16,7 +16,7 @@ def set_system_prompt(prompt):
     '''
     messages.append({"role": "system", "content": prompt})
 
-def get_completion(prompt, client_instance=client, model="gpt-3.5-turbo"):
+def get_completion(prompt, client_instance=client, model="gpt-4o"):
     '''
     chat with gpt 
     '''

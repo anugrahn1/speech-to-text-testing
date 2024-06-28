@@ -3,10 +3,11 @@ from whisper_mic import WhisperMic
 wakewords = ["Aaron", "aaron"]
 
 def setWakewords(wakewordList):
-   wakewords = wakewordList 
+   global wakewords  
+   wakewords = wakewordList
 
 def speechToText():
-    mic = WhisperMic(save_file=True, pause=1, device="cuda", english=True, energy=500 )
+    mic = WhisperMic(save_file=True, pause=1, device="cuda", english=True, energy=4000, dynamic_energy=False )
     
     userCommand = mic.listen()
     wakewordInString = [ele for ele in wakewords if(ele in userCommand)]
